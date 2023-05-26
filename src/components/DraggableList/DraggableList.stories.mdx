@@ -1,0 +1,33 @@
+import { Canvas, Story, Meta, Preview } from "@storybook/addon-docs";
+import { ListItemText } from "@mui/material";
+
+import { DraggableList } from "../components/DraggableList";
+
+
+<Meta
+  title="DraggableList"
+  component={DraggableList}
+/>
+
+<Preview>
+  <Story name="Primary">
+    {() => {
+      const items = [
+        'a',
+        'b',
+        'c',
+      ];
+      const getItemContent = (item: string) => {
+        return (
+          <ListItemText primary={item} />
+        );
+      };
+      return (
+        <DraggableList
+          items={items}
+          getItemContent={getItemContent}
+        />
+      );
+    }}
+  </Story>
+</Preview>
