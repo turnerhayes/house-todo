@@ -52,8 +52,6 @@ export const SiteHeader = () => {
     return routeMatches;
   }, [] as RouteMatch[]);
 
-  console.log('routeMatches:', routeMatches);
-
   return (
     <header>
       {
